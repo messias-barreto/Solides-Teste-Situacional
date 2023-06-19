@@ -2,15 +2,16 @@
 Após fazer o clone do Projeto
 - cd Solides-Teste-Situacional
 - rode o comando **composer install**
+- rode o comando **npm install**
 - rode o comando **php artisan migrate --seed**
 - rode o comando **php artisan serve**
 
 ## Rotas
 **<p>Authentication</p>**
-<p>http://localhost:8000/login  (POST)</p>
+<p>http://localhost:8000/api/login  (POST)</p>
 <p>funcionalidade: Realiza a authenticação do Usuário</p>
 
-<p>http://localhost:8000/register (POST)</p>
+<p>http://localhost:8000/api/register (POST)</p>
 <p>funcionalidade: Cadastrar um novo Usuário</p>
 
 **Users - Rota Autenticada!**
@@ -36,3 +37,11 @@ Após fazer o clone do Projeto
 
 <p>http://localhost:8000/products/{categoria} (GET)</p>
 <p>Visualiza Os Produtos pela Categoria</p>
+
+## Exemplo .env
+<p>DB_CONNECTION=mysql</p>
+<p>DB_HOST=127.0.0.1</p>
+<p>DB_PORT=3306</p>
+<p>DB_DATABASE=sou_banco</p>
+<p>DB_USERNAME=root</p>
+<p>DB_PASSWORD=sua_senha</p>
