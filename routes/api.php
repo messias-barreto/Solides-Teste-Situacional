@@ -27,5 +27,6 @@ Route::middleware(['auth:api', 'middleware' => 'cors'])->group(function () {
     Route::get('/products-by-category/{category}', [ProductController::class, 'getByCategory']);
 });
 
+
 Route::post('/login', [AuthenticateController::class, 'login']);
 Route::post('/register', [AuthenticateController::class, 'register']);
