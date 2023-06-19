@@ -3,5 +3,5 @@ import 'swagger-ui/dist/swagger-ui.css';
 
 SwaggerUI({
     dom_id: '#swagger-api',
-    url: 'http://localhost:8000/api/products',
+    url: 'http://localhost:8000/api',
 });

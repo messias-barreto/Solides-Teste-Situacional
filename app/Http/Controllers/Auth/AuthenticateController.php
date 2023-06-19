@@ -4,9 +4,11 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use Error;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Validator;
 
 class AuthenticateController extends Controller
 {
@@ -48,11 +50,18 @@ class AuthenticateController extends Controller
 
     public function register(Request $request)
     {
-        $request->validate([
+        $validate = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6',
         ]);
+
+        
+        if($validate->fails()){
+            return response()->json([
+                'message' => 'Erro ao Adicionar Usuário'
+            ], 400);
+        } 
 
         $user = User::create([
             'name' => $request->name,

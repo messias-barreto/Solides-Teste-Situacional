@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::middleware('auth:api')->group(function () {
+Route::middleware(['auth:api', 'middleware' => 'cors'])->group(function () {
     Route::apiResource('/categories', CategoryController::class);
     Route::apiResource('/users', UserController::class);
     Route::apiResource('/products', ProductController::class);
