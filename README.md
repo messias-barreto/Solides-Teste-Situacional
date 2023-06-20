@@ -8,35 +8,45 @@ Após fazer o clone do Projeto
 - rode o comando **php artisan serve**
 
 ## Rotas
-**<p>Authentication</p>**
-<p>http://localhost:8000/api/login  (POST)</p>
+## <p>Authentication</p>
+**<p>http://localhost:8000/api/login  (POST)</p>**
 <p>funcionalidade: Realiza a authenticação do Usuário</p>
+Parâmetros
+{"email": "providenci.marks@example.net", "password": "password"}
+<br>
+<br>
 
-<p>http://localhost:8000/api/register (POST)</p>
+**<p>http://localhost:8000/api/register (POST)</p>**
 <p>funcionalidade: Cadastrar um novo Usuário</p>
+Parâmetros
+"name": string,
+"email": string,
+"password": string
+<br>
 
-**Users - Rota Autenticada!**
-<p>http://localhost:8000/users (GET)</p>
+## Users - Rota Autenticada!
+
+**<p>http://localhost:8000/users (GET)</p>**
 <p>Visualizar todos os Usuários</p>
 
-<p>http://localhost:8000/users/%7Bid%7D (GET)</p>
+**<p>http://localhost:8000/users/id (GET)</p>**
 <p>Visualiza o Usuário pelo seu ID</p>
 
-**Category - Rota Autenticada!**
-<p>http://localhost:8000/category (GET)</p>
+## Category - Rota Autenticada!
+**<p>http://localhost:8000/category (GET)</p>**
 <p>Visualiza todas as Categorias</p>
 
-<p>http://localhost:8000/category/%7Bid%7D (GET)</p>
+**<p>http://localhost:8000/category/id (GET)</p>**
 <p>Visualiza a Categoria pelo seu ID </p>
 
-**Products - Rota Autenticada!**
-<p>http://localhost:8000/products (GET)</p>
+## Products - Rota Autenticada!
+**<p>http://localhost:8000/products (GET)</p>**
 <p>Visualiza todos os Produtos</p>
 
-<p>http://localhost:8000/products/%7Bid%7D (GET)</p>
+**<p>http://localhost:8000/products/id (GET)</p>**
 <p>Visualizar todos os Usuários</p>
 
-<p>http://localhost:8000/products/%7Bcategoria%7D (GET)</p>
+**<p>http://localhost:8000/products-by-category/categoria (GET)</p>**
 <p>Visualiza Os Produtos pela Categoria</p>
 
 **Exemplo .env**
