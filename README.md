@@ -19,9 +19,9 @@ Parâmetros
 **<p>http://localhost:8000/api/register (POST)</p>**
 <p>funcionalidade: Cadastrar um novo Usuário</p>
 Parâmetros
-"name": string,
+{"name": string,
 "email": string,
-"password": string
+"password": string}
 <br>
 
 ## Users - Rota Autenticada!
