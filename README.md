@@ -44,7 +44,7 @@ Parâmetros
 <p>Visualiza todos os Produtos</p>
 
 **<p>http://localhost:8000/api/products/id (GET)</p>**
-<p>Visualizar todos os Usuários</p>
+<p>Visualiza os Produtos pelo seu ID</p>
 
 **<p>http://localhost:8000/api/products-by-category/categoria (GET)</p>**
 <p>Visualiza Os Produtos pela Categoria</p>
